@@ -1,0 +1,12 @@
+server:
+    port: 8989
+spring:
+    application:
+        name: service-Miya
+    profiles:
+      active: node2
+    sleuth:
+        sampler:
+            percentage: 1
+    zipkin:
+        base-url: http://${spring.profiles.active}:9411
